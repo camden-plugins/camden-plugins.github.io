@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PluginCard from '../components/PluginCard.astro';
+import HeroGlow from '../components/HeroGlow.astro';
 import { plugins } from '../data/plugins';
 
 const paidCount = plugins.filter((p) => p.price !== null).length;
@@ -28,16 +29,13 @@ const faqs = [
 ---
 
 <Layout>
+  <div class="font-display">
   <Nav />
 
   <main>
     <!-- ============================ HERO ============================ -->
     <section class="relative overflow-hidden">
-      <div class="grid-lines absolute inset-0 opacity-70"></div>
-      <div
-        class="absolute -top-40 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-amber/10 blur-[120px]"
-      >
-      </div>
+      <HeroGlow />
 
       <!-- hero knob mark (the full glowing CamdenLookAndFeel knob) -->
       <img
@@ -59,9 +57,8 @@ const faqs = [
         <h1
           class="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl"
         >
-          Studio-grade audio plugins,<br />
-          themed after the
-          <span class="text-amber">London Underground</span>.
+          Audio plugins.<br />
+          <span class="text-amber">Made in London.</span>
         </h1>
 
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/65">
@@ -87,13 +84,8 @@ const faqs = [
           </a>
         </div>
 
-        <!-- accent "tube line" strip -->
-        <div class="mt-16 flex h-1.5 max-w-md overflow-hidden rounded-full">
-          <div class="flex-1 bg-amber"></div>
-          <div class="flex-1 bg-red"></div>
-          <div class="flex-1 bg-green"></div>
-          <div class="flex-1 bg-blue"></div>
-        </div>
+        <!-- accent bar -->
+        <div class="mt-16 h-1.5 w-40 rounded-full bg-amber"></div>
       </div>
     </section>
 
@@ -199,4 +191,5 @@ const faqs = [
   </main>
 
   <Footer />
+  </div>
 </Layout>

@@ -1,0 +1,12 @@
+---
+// Dev-only preview of the work-in-progress full landing page.
+// In `astro dev` it renders the WIP page at /full.
+// In a production build it redirects to home, so the WIP never ships.
+import FullLanding from '../_wip/full-landing.astro';
+
+if (import.meta.env.PROD) {
+  return Astro.redirect('/');
+}
+---
+
+<FullLanding />

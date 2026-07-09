@@ -1,26 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
+import HeroGlow from '../components/HeroGlow.astro';
 ---
 
 <Layout>
   <main
     class="relative flex min-h-screen flex-col items-center justify-center px-6 text-center"
   >
-    <!-- soft amber glow: a Gaussian-approximating radial gradient (stops along
-         exp(-x²/2σ²)) so the tail rolls off gently with no hard "ball" edge.
-         GPU-dithered + noise layer below = no banding. Behind the grunge texture. -->
-    <div
-      class="pointer-events-none absolute inset-0 -z-10"
-      style="background: radial-gradient(circle 62vh at 50% 52%, rgba(255,170,0,0.16) 0%, rgba(255,170,0,0.154) 8%, rgba(255,170,0,0.137) 17%, rgba(255,170,0,0.113) 25%, rgba(255,170,0,0.086) 33%, rgba(255,170,0,0.061) 42%, rgba(255,170,0,0.040) 50%, rgba(255,170,0,0.024) 58%, rgba(255,170,0,0.0135) 67%, rgba(255,170,0,0.0070) 75%, rgba(255,170,0,0.0034) 83%, rgba(255,170,0,0.0015) 92%, rgba(255,170,0,0) 100%);"
-    >
-    </div>
-
-    <!-- fractal-noise dither over the glow to kill any residual gradient banding -->
-    <div
-      class="dither pointer-events-none absolute inset-0 -z-10 opacity-20"
-    >
-    </div>
+    <HeroGlow />
 
     <div class="relative flex flex-col items-center">
       <Logo class="h-20 w-20" />
