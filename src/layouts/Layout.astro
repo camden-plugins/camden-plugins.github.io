@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Camden Plugins — audio plugins themed after the London Underground',
+  description = 'A line of meticulously crafted VST3 / CLAP / AU / LV2 audio plugins. Buy the binaries, or build them yourself — every plugin is open source.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://camden-plugins.com" />
+    <meta name="theme-color" content="#181d2e" />
+  </head>
+  <body class="bg-grunge min-h-screen antialiased">
+    <slot />
+  </body>
+</html>

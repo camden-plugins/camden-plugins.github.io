@@ -1,0 +1,44 @@
+---
+import Logo from './Logo.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/10 bg-[#141826]">
+  <div
+    class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 px-6 py-12 md:flex-row md:items-center"
+  >
+    <div class="flex items-center gap-3">
+      <Logo class="h-9 w-9" />
+      <div>
+        <p class="font-semibold">Camden Plugins</p>
+        <p class="text-sm text-white/50">
+          Open-source audio plugins, themed after the London Underground.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/60">
+      <a
+        href="https://github.com/camden-plugins"
+        target="_blank"
+        rel="noopener"
+        class="transition-colors hover:text-white">GitHub</a
+      >
+      <a href="#plugins" class="transition-colors hover:text-white">Plugins</a>
+      <a href="#faq" class="transition-colors hover:text-white">FAQ</a>
+      <a
+        href="mailto:hello@camden-plugins.com"
+        class="transition-colors hover:text-white">Contact</a
+      >
+    </div>
+  </div>
+
+  <div class="border-t border-white/5 px-6 py-5">
+    <p class="mx-auto max-w-6xl text-xs text-white/35">
+      © {year} Camden Plugins · Plugins are GPL-3.0 — source freely available.
+      Paid builds fund development. VST3 is a trademark of Steinberg Media
+      Technologies GmbH.
+    </p>
+  </div>
+</footer>

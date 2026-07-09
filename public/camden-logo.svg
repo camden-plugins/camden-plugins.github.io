@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Camden Plugins hero mark: one of our CamdenLookAndFeel knobs rendered as
+       the brand "C" — a warm-grey raised cap (top-lit, rim-bevelled) inside the
+       moat, wrapped by the sprayed amber value-arc with its accent value-dot.
+       Detailed / glowing: for large contexts (website hero). Use the flat
+       camden-app-icon.svg for small marks / app icons. -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232a45"/>
+      <stop offset="1" stop-color="#141828"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.42">
+      <stop offset="0" stop-color="#ffaa00" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffaa00" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="144" x2="0" y2="368" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#847e73"/>
+      <stop offset="1" stop-color="#4c473f"/>
+    </linearGradient>
+    <radialGradient id="dome" cx="209" cy="202" r="122" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#tile)"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+  <rect x="1.5" y="1.5" width="509" height="509" rx="110.5" fill="none"
+        stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.5"/>
+
+  <!-- soft outer glow of the sprayed value arc -->
+  <g filter="url(#soft)" opacity="0.5">
+    <path d="M 352.4 141.1 A 150 150 0 1 0 352.4 370.9"
+          fill="none" stroke="#ffaa00" stroke-width="34" stroke-linecap="round"/>
+  </g>
+
+  <!-- the knob (our drawRotarySlider) -->
+  <circle cx="256" cy="258.5" r="116" fill="#000000" opacity="0.18"/>
+  <circle cx="256" cy="256" r="112" fill="url(#body)"/>
+  <circle cx="256" cy="256" r="112" fill="url(#dome)"/>
+  <circle cx="256" cy="256" r="112" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5"/>
+  <path d="M 161.1 203.4 A 108.5 108.5 0 0 1 350.9 203.4"
+        fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 350.9 308.6 A 108.5 108.5 0 0 1 161.1 308.6"
+        fill="none" stroke="#000000" stroke-opacity="0.24" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- unfilled track + sprayed value arc -->
+  <path d="M 352.4 141.1 A 150 150 0 1 0 352.4 370.9"
+        fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 352.4 141.1 A 150 150 0 1 0 352.4 370.9"
+        fill="none" stroke="#ffaa00" stroke-width="30" stroke-linecap="round"/>
+
+  <!-- accent value-dot bead on the body face -->
+  <circle cx="313.1" cy="188.0" r="18" fill="#000000" opacity="0.15"/>
+  <circle cx="313.1" cy="188.0" r="14" fill="#ffaa00"/>
+</svg>

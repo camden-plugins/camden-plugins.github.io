@@ -1,0 +1,30 @@
+---
+// Camden Plugins suite master mark — the brand "C" (Camden) drawn as one of our
+// knob value-arcs, with the accent value-dot on the upper terminal. Flat and
+// glow-free so it stays crisp at favicon / nav sizes. The full glowing knob
+// (camden-logo.svg) is reserved for large "hero" contexts.
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+
+<svg
+  class={className}
+  viewBox="0 0 512 512"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Camden Plugins"
+>
+  <defs>
+    <linearGradient id="camden-logo-tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232a45" />
+      <stop offset="1" stop-color="#161b2b" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#camden-logo-tile)" />
+  <path d="M 348.6 145.9 A 148 148 0 1 0 348.6 366.1"
+        stroke="#ffb31a" stroke-width="34" stroke-linecap="round" />
+  <circle cx="311.0" cy="189.6" r="17" fill="#ffb31a" />
+</svg>
