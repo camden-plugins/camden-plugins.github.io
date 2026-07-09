@@ -77,13 +77,20 @@ body {
   background-image: url('/imgs/paint-texture.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.06;
-  mix-blend-mode: overlay;
+  opacity: 0.1;
+  mix-blend-mode: multiply;
   pointer-events: none;
 }
 
-/* Frosted recessed panel — the plugins' signature surface. */
-.panel {
+/* Fine, monochrome fractal-noise layer used to dither soft gradients (e.g. the
+   hero glow) so they don't band on dark backgrounds. */
+.dither {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+
+/* Frosted recessed panel — the plugins' signature surface. */.panel {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 6px;
