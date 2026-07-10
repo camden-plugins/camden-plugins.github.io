@@ -20,7 +20,7 @@ npm run preview  # preview the production build
 ## Structure
 
 ```
-public/            fonts (Railway), textures + favicon (copied from camden-core)
+public/            fonts (Camden), textures + favicon (copied from camden-core)
 src/
   data/plugins.ts  ← single source of truth for the product line-up + prices
   components/       Nav, PluginCard, Logo (suite mark), Roundel (Tube Station only), Footer
@@ -31,7 +31,7 @@ src/
 
 ## Branding
 
-- Palette + Railway font come straight from the plugin GUIs (`CamdenLookAndFeel`),
+- Palette + Camden font come straight from the plugin GUIs (`CamdenLookAndFeel`),
   so the site matches the products: dark blue `#181d2e`, amber `#ffaa00`
   (saturation), red `#e94560` (clippers), green `#3ed99b` (dynamics), blue
   `#3e92f4` (analysis).

@@ -7,21 +7,21 @@
  * ------------------------------------------------------------------ */
 
 @font-face {
-  font-family: 'Railway';
-  src: url('/fonts/Railway.ttf') format('truetype');
+  font-family: 'Camden';
+  src: url('/fonts/Camden-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Railway';
-  src: url('/fonts/Railway-Semibold.ttf') format('truetype');
+  font-family: 'Camden';
+  src: url('/fonts/Camden-Semibold.woff2') format('woff2');
   font-weight: 600;
   font-display: swap;
 }
 
-/* Body / running text — a clean, evenly-drawn neutral sans. Railway (our free
-   Johnston homage) is reserved for the brand wordmark + titles only. */
+/* Camden is now the site font everywhere (display + body). IBM Plex Sans is kept
+   below as an available fallback but is not referenced by the theme. */
 @font-face {
   font-family: 'IBM Plex Sans';
   src: url('/fonts/IBMPlexSans-400.woff2') format('woff2');
@@ -50,8 +50,8 @@
   --color-green: #3ed99b; /* dynamics / compression */
   --color-neutral-control: #b4bac6;
 
-  --font-display: 'Railway', ui-sans-serif, system-ui, sans-serif;
-  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Camden', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Camden', ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
