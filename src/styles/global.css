@@ -77,12 +77,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* "Paired" typography: a geometric text face for running copy, Camden kept for
-   headings. Applied to the full page; the minimal landing stays all-Camden. */
+/* "Paired" typography: Camden by default (headings, labels, chips, buttons),
+   with the geometric text face reserved for running-text paragraphs (tag them
+   `font-text`). Applied to the full page; the minimal landing stays all-Camden. */
 .type-paired {
-  font-family: var(--font-text);
-}
-.type-paired :is(h1, h2, h3, h4) {
   font-family: var(--font-display);
 }
 
