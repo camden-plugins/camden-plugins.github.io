@@ -6,8 +6,8 @@
        camden-app-icon.svg for small marks / app icons. -->
   <defs>
     <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#232a45"/>
-      <stop offset="1" stop-color="#141828"/>
+      <stop offset="0" stop-color="#232734"/>
+      <stop offset="1" stop-color="#121319"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.5" cy="0.5" r="0.42">
       <stop offset="0" stop-color="#ffaa00" stop-opacity="0.16"/>
