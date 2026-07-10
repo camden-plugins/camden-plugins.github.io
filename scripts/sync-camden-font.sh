@@ -34,8 +34,13 @@ if [[ "$WORK_BRANCH" == "$PUBLISH_BRANCH" ]]; then
   exit 1
 fi
 
-if ! git diff --quiet || ! git diff --cached --quiet; then
-  echo "ERROR: working tree has uncommitted changes — commit or stash them first." >&2
+# Guard against UNRELATED uncommitted changes. The Camden font files themselves
+# are allowed to be pre-modified (the font build often drops them in already —
+# that's exactly what we're syncing).
+other="$(git status --porcelain | grep -vE 'public/fonts/Camden-(Regular|Semibold)\.woff2$' || true)"
+if [[ -n "$other" ]]; then
+  echo "ERROR: working tree has other uncommitted changes — commit or stash them first:" >&2
+  echo "$other" >&2
   exit 1
 fi
 
