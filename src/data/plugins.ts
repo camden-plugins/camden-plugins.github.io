@@ -26,7 +26,7 @@ export interface Plugin {
 export const plugins: Plugin[] = [
   {
     name: 'Tube Station',
-    tagline: 'Flagship tube saturator',
+    tagline: 'Flagship saturator',
     blurb:
       'Chebyshev-waveshaped valve warmth with a memory/hysteresis model, calibrated makeup gain and tone tilt. Ships in mono and stereo variants.',
     category: 'Saturation',
@@ -50,12 +50,12 @@ export const plugins: Plugin[] = [
     repoUrl: 'https://github.com/camden-plugins/tube-station-multiband',
   },
   {
-    name: 'Off Peak',
+    name: 'Off-Peak',
     tagline: 'Oversampled clipper / maximizer',
     blurb:
       'A transparent, heavily-oversampled hard/soft clipper for taming peaks and squeezing out loudness without the pumping.',
     category: 'Clipper',
-    accent: 'red',
+    accent: 'amber',
     formats: ['VST3', 'CLAP', 'LV2', 'Standalone'],
     price: 29,
     buyUrl: null,
