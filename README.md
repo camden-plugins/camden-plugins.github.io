@@ -33,7 +33,7 @@ src/
 
 - Palette + Camden font come straight from the plugin GUIs (`CamdenLookAndFeel`),
   so the site matches the products: dark blue `#181d2e`, amber `#ffaa00`
-  (saturation), red `#e94560` (clippers), green `#3ed99b` (dynamics), blue
+  (saturation), red `#e94560` (clippers), green `#95c17c` (dynamics), blue
   `#3e92f4` (analysis).
 - The **suite** mark (`Logo.astro`) is a neutral four-accent chip. The
   **Underground roundel** (`Roundel.astro`) is reserved for the Tube Station

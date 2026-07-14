@@ -57,7 +57,7 @@
   --color-amber: #ffaa00; /* saturation / drive — the signature hue */
   --color-red: #e94560; /* output / danger */
   --color-blue: #3e92f4; /* filters / analysis */
-  --color-green: #3ed99b; /* dynamics / compression */
+  --color-green: #95c17c; /* dynamics / compression (warm sage) */
   --color-neutral-control: #b4bac6;
 
   --font-display: 'Camden', ui-sans-serif, system-ui, sans-serif;
